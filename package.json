@@ -3,10 +3,9 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
-    "clean": "git clean -xfd",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "commit": "git cz",
+    "commit": "git add . && git cz && git push",
     "knip": "knip"
   },
   "author": {
