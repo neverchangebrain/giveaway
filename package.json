@@ -3,9 +3,10 @@
   "version": "1.0.0",
   "type": "module",
   "scripts": {
+    "clean": "git clean -xfd",
     "lint-staged": "lint-staged",
     "prepare": "husky",
-    "cm": "cz",
+    "commit": "git cz",
     "knip": "knip"
   },
   "author": {
@@ -16,6 +17,7 @@
   "license": "Apache-2.0",
   "packageManager": "pnpm@10.11.0",
   "devDependencies": {
+    "@commitlint/config-conventional": "^19.8.1",
     "@eslint/compat": "^1.2.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.27.0",
@@ -24,7 +26,7 @@
     "@typescript-eslint/parser": "^8.32.1",
     "commitizen": "^4.3.1",
     "commitlint": "^19.8.1",
-    "cz-conventional-changelog": "^3.3.0",
+    "cz-emoji": "1.3.2-canary.2",
     "eslint": "^9.27.0",
     "eslint-plugin-prettier": "^5.4.0",
     "husky": "^9.1.7",
@@ -33,10 +35,5 @@
     "prettier": "^3.5.3",
     "rimraf": "^6.0.1",
     "typescript": "^5.8.3"
-  },
-  "config": {
-    "commitizen": {
-      "path": "./node_modules/cz-conventional-changelog"
-    }
   }
 }
