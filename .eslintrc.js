@@ -1,46 +1,31 @@
-module.exports = {
+export default {
   env: {
-    jest: true,
+    node: true,
+    es2021: true,
   },
   globals: {
-    page: true,
-    browser: true,
-    context: true,
+    Atomics: "readonly",
+    SharedArrayBuffer: "readonly",
   },
   settings: {},
   parser: "@typescript-eslint/parser",
-  plugins: [
-    "@typescript-eslint",
-    "prettier",
-    "jsx-a11y",
-    "react-hooks",
-    "import",
-  ],
+  plugins: ["@typescript-eslint", "prettier"],
   extends: [
-    "plugin:react/recommended",
-    "plugin:import/errors",
-    "plugin:import/warnings",
-    "plugin:import/typescript",
+    "eslint:recommended",
+    "plugin:@typescript-eslint/recommended",
     "prettier",
-    "plugin:jsx-a11y/recommended",
   ],
-  parserOptions: { ecmaVersion: 2018, sourceType: "module" },
+  parserOptions: {
+    ecmaVersion: 2021,
+    sourceType: "module",
+  },
   rules: {
-    "react/prop-types": "off",
     "prettier/prettier": "error",
-    "react-hooks/rules-of-hooks": "error",
-    "react-hooks/exhaustive-deps": "error",
-    "import/no-unresolved": "off",
-    "react/react-in-jsx-scope": "off",
-    "import/order": [
+    "@typescript-eslint/explicit-function-return-type": "off",
+    "@typescript-eslint/no-explicit-any": "off",
+    "@typescript-eslint/no-unused-vars": [
       "warn",
-      {
-        alphabetize: {
-          order: "asc",
-          caseInsensitive: true,
-        },
-        "newlines-between": "never",
-      },
+      { argsIgnorePattern: "^_", varsIgnorePattern: "^_" },
     ],
   },
 };

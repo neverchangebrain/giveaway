@@ -4,5 +4,5 @@
 if [ "$CI" = "true" ]; then
   echo "Skipping lint-staged on CI"
 else
-  pnpm lint-staged
+  yarn lint-staged
 fi

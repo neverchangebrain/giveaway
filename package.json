@@ -14,13 +14,14 @@
     "url": "https://neverchangebrain.space"
   },
   "license": "Apache-2.0",
-  "packageManager": "pnpm@10.11.0",
   "devDependencies": {
     "@commitlint/config-conventional": "^19.8.1",
     "@eslint/compat": "^1.2.9",
     "@eslint/eslintrc": "^3.3.1",
     "@eslint/js": "^9.27.0",
-    "@types/node": "^22.15.19",
+    "@prisma/client": "^6.8.2",
+    "@types/node": "^22.15.21",
+    "@types/pg": "^8.15.2",
     "@typescript-eslint/eslint-plugin": "^8.32.1",
     "@typescript-eslint/parser": "^8.32.1",
     "commitizen": "^4.3.1",
@@ -31,8 +32,17 @@
     "husky": "^9.1.7",
     "knip": "^5.56.0",
     "lint-staged": "^16.0.0",
+    "pg": "^8.16.0",
     "prettier": "^3.5.3",
+    "prisma": "^6.8.2",
     "rimraf": "^6.0.1",
+    "tsc-alias": "^1.8.16",
     "typescript": "^5.8.3"
-  }
+  },
+  "dependencies": {
+    "axios": "^1.9.0",
+    "discord.js": "^14.19.3",
+    "yaml": "^2.8.0"
+  },
+  "packageManager": "yarn@4.9.1"
 }
